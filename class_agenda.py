@@ -13,3 +13,13 @@ class Agenda:
             print('Código: ', self.listaContatos[i].cod,
             'Nome: ', self.listaContatos[i].nome,
             'Telefone: ', self.listaContatos[i].telefone)
+    def alterar_contatos_tel(self):
+        for i in range(len(self.listaContatos)):
+            print('Código: ', self.listaContatos[i].cod,
+            'Nome: ', self.listaContatos[i].nome,
+            'Telefone: ', self.listaContatos[i].telefone)
+        in_cod=input('Insira o código do contato.\n: ')
+        for i in range(len(self.listaContatos)):
+            if self.listaContatos[i].cod == in_cod:
+                self.listaContatos[i].telefone=input('Insira aqui o novo número.\n: ')
+                
