@@ -1,3 +1,4 @@
+#Classe própria para salvar e listar os dados inseridos na class_contato.
 from class_contato import *
 class Agenda:
     def __init__(self):

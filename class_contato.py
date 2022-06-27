@@ -1,3 +1,4 @@
+#Classe própria para inserir os dados de cadastro que serão salvos na class_agenda
 class Contato:
     #def metodo(argumento1, argumento2 etc.)
     #def __init__(self, cod, nome, telefone):

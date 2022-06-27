@@ -1,3 +1,4 @@
+#Classe própria para criar um menu de interação, onde se cadastra e mostra os cadastos.
 from class_agenda import *
 
 class Menu:
