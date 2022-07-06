@@ -1,2 +1,2 @@
-from class_menu import Menu
+from class_menu_db import *
 abrir_agenda = Menu()

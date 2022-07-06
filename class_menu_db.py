@@ -1,9 +1,8 @@
-from class_agenda import Agenda
-
+from class_db_agenda import*
 
 class Menu:
     def __init__(self):
-        agenda = Agenda()
+        agenda = DBAgenda()
 
         while True:
             entrada_menu = input('Digite!\n'
@@ -16,11 +15,10 @@ class Menu:
                                  '0 - Sair\n')
 
             if entrada_menu == '1':
-                cod = len(agenda.listaContatos) + 1
+                cod = None
                 nome = input('Entre com o Nome: ')
                 telefone = input('Entre com o Telefone: ')
                 email = input('Entre com o E-mail: ')
-
                 agenda.salva_contato(cod, nome, telefone, email)
 
             elif entrada_menu == '2':
@@ -28,22 +26,25 @@ class Menu:
 
             elif entrada_menu == '3':
                 cod = int(input('Informe o código do contato: '))
-                nome_novo = input('Entre com o novo Nome: ')
-                agenda.altera_nome(cod, nome_novo)
+                valor = input('Entre com o novo Nome: ')
+                atributo = 'nome'
+                agenda.alterar_contato(atributo, valor, cod)
 
             elif entrada_menu == '4':
                 cod = int(input('Informe o código do contato: '))
-                telefone_novo = input('Entre com o novo Telefone: ')
-                agenda.altera_telefone(cod, telefone_novo)
+                valor = input('Entre com o novo Telefone: ')
+                atributo = 'telefone'
+                agenda.alterar_contato(atributo, valor, cod)
 
             elif entrada_menu == '5':
                 cod = int(input('Informe o código do contato: '))
-                email_novo = input('Entre com o novo E-mail: ')
-                agenda.altera_email(cod, email_novo)
+                valor = input('Entre com o novo E-mail: ')
+                atributo = 'email'
+                agenda.alterar_contato(atributo, valor, cod)
 
             elif entrada_menu == '6':
                 cod = int(input('Informe o código do contato: '))
-                agenda.exclui_contato(cod)
+                agenda.excluir_contato(cod)
 
             elif entrada_menu == '0':
                 break
