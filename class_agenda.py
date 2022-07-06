@@ -1,4 +1,4 @@
-from classe_contato import Contato
+from class_contato import Contato
 
 
 class Agenda:

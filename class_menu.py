@@ -1,4 +1,4 @@
-from classe_agenda import Agenda
+from class_agenda import Agenda
 
 
 class Menu:
